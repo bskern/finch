@@ -4,6 +4,7 @@
 * [Argonaut](json.md#argonaut)
 * [Jackson](json.md#jackson)
 * [Json4s](json.md#json4s)
+* [PlayJson](json.md#playjson)
 
 --
 
@@ -98,6 +99,17 @@ import org.json4s.DefaultFormats
 implicit val formats: Formats = DefaultFormats ++ JodaTimeSerializers.all
 ```
 
+### PlayJson
+
+* Bring the dependency to the `finch-playjson` module.
+* Create appropriate implicit Play JSON `Reads` and/or `Writes`
+
+```scala
+import io.finch.playjson._
+import play.api.libs.json._
+```
+
+
 [argonaut]: http://argonaut.io
 [jackson]: http://wiki.fasterxml.com/JacksonHome
 [json4s]: http://json4s.org/
@@ -106,4 +118,3 @@ implicit val formats: Formats = DefaultFormats ++ JodaTimeSerializers.all
 
 --
 Read Next: [Cookbook](cookbook.md)
-
